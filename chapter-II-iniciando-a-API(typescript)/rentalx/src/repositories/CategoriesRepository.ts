@@ -18,6 +18,7 @@ class CategoriesRepository {
   create({ name, description}: ICreateCategoryDTO): void {
     const category = new Category();
 
+  // Object.assing(destion, ...origens) => copiar os valores de um ou mais objetos de origem p/ objeto destino
     Object.assign(category, {
       name,
       description,
@@ -31,7 +32,7 @@ class CategoriesRepository {
     return this.categories;
   }
 
-  findByName(name: string) {
+  findByName(name: string): Category | undefined {
     const category = this.categories.find((category) => category.name === name);
     return category;
   }
