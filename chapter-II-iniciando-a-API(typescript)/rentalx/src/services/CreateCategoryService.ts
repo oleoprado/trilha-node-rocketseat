@@ -1,0 +1,5 @@
+class CreateCategory {
+
+}
+
+export { CreateCategory }
